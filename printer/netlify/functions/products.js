@@ -6,7 +6,7 @@ const SUPABASE_KEY = process.env.SUPABASE_KEY;
 exports.handler = async function () {
   try {
     const response = await fetch(
-  `${SUPABASE_URL.replace(/\/$/, "")}/rest/v1/products?id=eq.1&select=*`,
+  `${SUPABASE_URL}products?id=eq.1&select=*`,
   {
     headers: {
       apikey: SUPABASE_KEY
