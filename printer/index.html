@@ -763,6 +763,7 @@ async function loadProduct() {
 document.querySelector(".product-title").textContent = product.name;
 document.querySelector(".product-type").textContent = product.description;
 document.querySelector(".price").textContent = "€" + product.price.toFixed(2);
+document.querySelector(".product-image").src = product.image_url;
 }
 
 loadProduct();
