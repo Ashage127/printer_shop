@@ -6,7 +6,7 @@ const SUPABASE_KEY = process.env.SUPABASE_KEY;
 exports.handler = async function () {
   try {
     const response = await fetch(
-  `${SUPABASE_URL}products?id=eq.1&select=*`,
+  `${SUPABASE_URL}products??active=eq.true&select=*,
   {
     headers: {
       apikey: SUPABASE_KEY
