@@ -5,7 +5,7 @@ const SUPABASE_KEY = process.env.SUPABASE_KEY;
 
 exports.handler = async function () {
   return {
-  stausCode: 200,
+  statusCode: 200,
   body: "Backend töötab"
  };
 }; 
