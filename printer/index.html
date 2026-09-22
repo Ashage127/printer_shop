@@ -625,7 +625,10 @@ async function loadProduct() {
   const productsContainer = document.getElementById("products");
 
   data.forEach(product => {
-  console.log(product);
+  const card = document.createElement("article");
+card.className = "product";
+
+productsContainer.appendChild(card);
 });
   }
 
