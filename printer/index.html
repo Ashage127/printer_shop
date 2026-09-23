@@ -602,9 +602,12 @@ async function loadProduct() {
   const productsContainer = document.getElementById("products");
   productsContainer.addEventListener("click", (event) => {
     if (!event.target.classList.contains("add-btn")) return;
-
+const productId = Number(event.target.dataset.id);
+const product = data.find(item => item.id === productId);
+console.log(cart);
     cartCount++;
     cartDisplay.textContent = cartCount;
+    cart.push(product);
   });
 
   data.forEach(product => {
@@ -617,7 +620,7 @@ card.innerHTML = `
     <div class="product-type">${product.description}</div>
     <div class="product-bottom">
       <span class="price">€${product.price.toFixed(2)}</span>
-      <button class="add-btn">ADD TO CART</button>
+      <button class="add-btn" data-id="${product.id}">ADD TO CART</button>
     </div>
   </div>
 `;
