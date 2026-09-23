@@ -604,6 +604,8 @@ async function loadProduct() {
     if (!event.target.classList.contains("add-btn")) return;
 const productId = Number(event.target.dataset.id);
 const product = data.find(item => item.id === productId);
+   let cartCount = 0;
+const cart = []; 
 console.log(cart);
     cartCount++;
     cartDisplay.textContent = cartCount;
