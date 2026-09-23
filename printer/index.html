@@ -596,6 +596,9 @@
       this.reset();
 
     });
+  let cartCount = 0;
+const cart = []; 
+  
 async function loadProduct() {
   const response = await fetch("https://snazzy-truffle-4b50a6.netlify.app/.netlify/functions/products");
   const data = await response.json();
@@ -604,8 +607,7 @@ async function loadProduct() {
     if (!event.target.classList.contains("add-btn")) return;
 const productId = Number(event.target.dataset.id);
 const product = data.find(item => item.id === productId);
-   let cartCount = 0;
-const cart = []; 
+
 console.log(cart);
     cartCount++;
     cartDisplay.textContent = cartCount;
